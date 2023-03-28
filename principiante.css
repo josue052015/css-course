@@ -1,6 +1,6 @@
- /*CLASE 1:  selectores */
+ /**************CLASE 1:  selectores *********************/
 
-/* tipos de selectores:
+ /* tipos de selectores:
 
 -clase
 -id
@@ -11,27 +11,27 @@
 -pseudoclases
 */
 
-/* selector por atributo */
-[type = button]{
-    background-color: red;
-}
+ /* selector por atributo */
+ [type=button] {
+     background-color: red;
+ }
 
-/* selector por descendiente */
+ /* selector por descendiente */
 
-h1 span {
-    color: red;
-}
+ h1 span {
+     color: red;
+ }
 
-/* selector por pseudoclase (active es cuando el usuario hace 
+ /* selector por pseudoclase (active es cuando el usuario hace 
 cliek en un elemento html */
 
-.title-span:active{
-    color: aqua;
-}
+ .title-span:active {
+     color: aqua;
+ }
 
-/* CLASE 2: Especificidad */
+ /********************* CLASE 2: Especificidad *********************/
 
-/* La especificidad es la jerarquia con la que se aplican los estilos en css un nivel mas alto
+ /* La especificidad es la jerarquia con la que se aplican los estilos en css un nivel mas alto
 sobreescribe los estilos del mas bajo
 
 1- !important
@@ -43,4 +43,41 @@ sobreescribe los estilos del mas bajo
 7- elementos
 8- pseudoelementos
 
+*/
+
+ /********************* CLASE 3: metodologia BEM *********************/
+
+ /* BEM es una metodologia para no tener problemas de especificidad al usar muchas clases en css
+y nombramos las clases segun el bloque y el elemento. EJ: 
+
+<div class="contact-form">
+<input type="text" class="contact-form__input--active">(-- lo utilizamos para indicar que se va
+                                                        a utilizar un estilo especifico para un
+                                                        elemento en especifico)                   
+<input type="text" class="contact-form__input">
+<input type="text" class="contact-form__input">
+<input type="text" class="contact-form__input">
+<input type="text" class="contact-form__input">
+</div>
+
+en el siguiente caso:
+
+<div class="contact-form">
+<h2 class="contact-form__h2">
+<span class="contact-form__h2-p"></span>
+</h2>
+</div>
+*/
+
+ /********************* CLASE 4: medidas *********************/
+
+ /* hay 2 tipos de medidas las cuales son:
+
+-fijas: son las que no cambian como: px, mm, cm, ect.
+
+-relativas: son las que varian como: em y rem. ( "rem" es más útil para establecer tamaños y 
+                                                dimensiones segun el tamaño de toda 
+                                                la página, mientras que "em" es más útil para
+                                                 establecer tamaños y dimensiones segun el 
+                                                 tamaño del elemento padre.)
 */
