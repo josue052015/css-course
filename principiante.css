@@ -1,0 +1,46 @@
+ /*CLASE 1:  selectores */
+
+/* tipos de selectores:
+
+-clase
+-id
+-universal (*)
+-de tipo (nombre del elemento ejemplo "H1")
+-por atributo (disabled por ejemplo o cualquier otro atributo de la etiqueta html) 
+-descendiente (funciona cuando tiene hijos y solo se aplica al hijo)
+-pseudoclases
+*/
+
+/* selector por atributo */
+[type = button]{
+    background-color: red;
+}
+
+/* selector por descendiente */
+
+h1 span {
+    color: red;
+}
+
+/* selector por pseudoclase (active es cuando el usuario hace 
+cliek en un elemento html */
+
+.title-span:active{
+    color: aqua;
+}
+
+/* CLASE 2: Especificidad */
+
+/* La especificidad es la jerarquia con la que se aplican los estilos en css un nivel mas alto
+sobreescribe los estilos del mas bajo
+
+1- !important
+2- estilos en linea (lo que se escribe dentro de style en html)
+3- identificadores (id)
+4- clases
+5- pseudoclases
+6- atributos
+7- elementos
+8- pseudoelementos
+
+*/
