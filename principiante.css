@@ -81,3 +81,61 @@ en el siguiente caso:
                                                  establecer tamaños y dimensiones segun el 
                                                  tamaño del elemento padre.)
 */
+
+ /********************* CLASE 5: normalize  *********************/
+
+ /* normalize.css es hoja de estilo CSS que armoniza la visualización inicial de los navegadores 
+y que corrige algunos errores. (se puede descargar o instalarse con npm) */
+
+ /********************* CLASE 6: cajas  *********************/
+
+ /* Las cajas son los bloques que contienen los elementos en html. Los elementos pueden ser:
+
+- elemento en linea (ocupa solo el ancho que ocupa el elemento dentro de la caja. Ej: span)
+- elemento en bloques (ocupa todo el ancho del bloque. Ej: h1)
+
+NOTA: 
+
+- A un elemento en linea no se le puede modificar su altura ni anchura, sin embargo a un 
+  elemento en bloque si 
+
+- Un shorthand property es una propiedad que podemos acortar (como el padding, que podemos
+  establecer un padding general o un padding-top)
+*/
+
+ h1 {
+     /* esto es para hacer que un elemento se comporte como un elemento en linea.
+    En consecuencia este ocupara solo el espacio necesario en la caja y no se le 
+    podra añadir espacio de ninguna forma.
+    
+    */
+     display: inline;
+ }
+
+ .display-block-example {
+     /* esto es para hacer que un elemento se comporte como un elemento en bloque */
+     display: block;
+ }
+
+ /* box sizing: nos ayuda a incluir el padding y el borde en el ancho y alto total del 
+ la caja
+ */
+
+ .box-sizing-contentbox{
+    background-color: brown;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    /* content-box le suma el padding del elemento al alto y ancho total de la caja */
+    box-sizing:content-box;
+ }
+
+ .box-sizing-borderbox{
+    background-color: brown;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    /* border-box mantiene el mismo alto y ancho total de la caja sin importar el 
+    padding */
+    box-sizing:border-box;
+ }
