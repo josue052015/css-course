@@ -121,21 +121,87 @@ NOTA:
  la caja
  */
 
- .box-sizing-contentbox{
-    background-color: brown;
-    width: 300px;
-    height: 300px;
-    padding: 50px;
-    /* content-box le suma el padding del elemento al alto y ancho total de la caja */
-    box-sizing:content-box;
+ .box-sizing-contentbox {
+     background-color: brown;
+     width: 300px;
+     height: 300px;
+     padding: 50px;
+     /* content-box le suma el padding del elemento al alto y ancho total de la caja */
+     box-sizing: content-box;
  }
 
- .box-sizing-borderbox{
-    background-color: brown;
-    width: 300px;
-    height: 300px;
-    padding: 50px;
-    /* border-box mantiene el mismo alto y ancho total de la caja sin importar el 
+ .box-sizing-borderbox {
+     background-color: brown;
+     width: 300px;
+     height: 300px;
+     padding: 50px;
+     /* border-box mantiene el mismo alto y ancho total de la caja sin importar el 
     padding */
-    box-sizing:border-box;
+     box-sizing: border-box;
  }
+
+ /********************* CLASE 7: outline  *********************/
+
+ /* outline es como un border pero que no consume espacio adicional en el DOM este tipo de 
+ borde lo que hace es dibujar ese elemento pero no ocupar espacio real en el DOM, evitando que 
+ los demas elementos se muevan
+ .EJ: 
+ */
+
+ .box-sizing-borderbox{
+    outline: 5px solid black;
+ }
+ 
+/********************* CLASE 8: position  *********************/
+.example-boxes{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    background-color:cornflowerblue;
+    font-size: 3em;
+}
+/* 
+
+-position static: esto significa que el elemento no esta posicionado por lo que cambiarle top 
+o left no funcionara.
+
+-position relative: este posicionamiento lo que hace es ocupar su espacio original en el dom
+siempre, es decir que aunque lo movamos cambiandole el top o bottom el espacio que ocupaba
+anteriormente permanecera y los demas elementos no se veran afectados por este cambio
+
+NOTA: en relative las propiedades mas importantes son top y left (si alguna de esta estan ya 
+definidas su contraparte bottom o right no funcionaran) 
+*/
+.position-box-3{
+    position: relative;
+    right: 40px;
+}
+
+/* 
+-position absolute: 
+*/
+
+/********************* CLASE 9: z-index  *********************/
+
+/* z-index es la posicion respecto al eje z funciona cuando un elemento ya esta posicionado 
+y mientra mayor sea el z-index mas cerca estara de la vista de la pantalla, osea que el elmento
+que tenga mayor z-index es el que se vera. 
+*/
+
+/* aqui normalmente el box 2 estaria por encima a los 2 tener position relative, pero como
+le agregue z-index al primero, este esta por encima del 2
+*/
+.z-index-box-1{
+    position: relative;
+    right: -40px;
+    z-index: 100;
+}
+
+.z-index-box-2{
+    position: relative;
+   /*  z-index: 1; */
+}
+
+/* NOTA: para poner el hijo por debajo de un contenedor la unica forma existente es al hijo
+darle un z-index de -1 y al contenedor no darle z-index (el porqué ni el mismo dalto lo sabe xD)
+*/
